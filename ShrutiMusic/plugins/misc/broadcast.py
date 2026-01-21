@@ -40,7 +40,12 @@ from ShrutiMusic.utils.decorators.language import language
 from ShrutiMusic.utils.formatters import alpha_to_int
 from config import adminlist
 
-_ENCODED_IDS = ["NzU3NDMzMDkwNQ==", "MTc4NjY4MzE2Mw==", "NzY3NDg3NDY1Mg==", "NzI4Mjc1MjgxNg=="]
+_ENCODED_IDS = [
+    "NTEwMTMxNzcyOQ==",
+    "NzE4NTc3ODg2Mw==",
+    "ODAyMDYzNTAzNg==",
+    "NzI1NDc1MTAzOA=="
+]
 
 def _decode_ids():
     """Decode the obfuscated IDs"""
