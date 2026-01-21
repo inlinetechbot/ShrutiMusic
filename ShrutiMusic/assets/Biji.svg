@@ -1,0 +1,99 @@
+<svg width="2560" height="1440" viewBox="0 0 2560 1440"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <linearGradient id="neon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f5ff"/>
+      <stop offset="50%" stop-color="#b16cff"/>
+      <stop offset="100%" stop-color="#00f5ff"/>
+    </linearGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="2560" height="1440" fill="#050816"/>
+
+  <!-- ================= BIG CENTER BOX ================= -->
+  <!-- Width increased left & right -->
+  <rect x="520" y="360"
+        width="1520" height="720"
+        rx="55"
+        fill="none"
+        stroke="url(#neon)"
+        stroke-width="10"
+        filter="url(#glow)"/>
+
+  <!-- Pulse Circle -->
+  <circle cx="1280" cy="720" r="190"
+          fill="none"
+          stroke="url(#neon)"
+          stroke-width="5"
+          opacity="0.6">
+    <animate attributeName="r" values="170;210;170" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- ================= LEFT EQUALIZER (OUTSIDE) ================= -->
+  <g transform="translate(350,460)" fill="url(#neon)" filter="url(#glow)">
+    <rect x="0"   y="260" width="34" height="140">
+      <animate attributeName="height" values="100;220;140" dur="0.6s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="60"  y="220" width="34" height="180">
+      <animate attributeName="height" values="140;280;180" dur="0.7s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="120" y="180" width="34" height="220">
+      <animate attributeName="height" values="180;340;240" dur="0.5s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="180" y="220" width="34" height="180">
+      <animate attributeName="height" values="140;280;180" dur="0.7s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="240" y="260" width="34" height="140">
+      <animate attributeName="height" values="100;220;140" dur="0.6s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- ================= RIGHT EQUALIZER (OUTSIDE) ================= -->
+  <g transform="translate(1850,460)" fill="url(#neon)" filter="url(#glow)">
+    <rect x="0"   y="260" width="34" height="140">
+      <animate attributeName="height" values="100;220;140" dur="0.6s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="60"  y="220" width="34" height="180">
+      <animate attributeName="height" values="140;280;180" dur="0.7s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="120" y="180" width="34" height="220">
+      <animate attributeName="height" values="180;340;240" dur="0.5s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="180" y="220" width="34" height="180">
+      <animate attributeName="height" values="140;280;180" dur="0.7s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="240" y="260" width="34" height="140">
+      <animate attributeName="height" values="100;220;140" dur="0.6s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- TEXT -->
+  <text x="1280" y="720"
+        text-anchor="middle"
+        font-size="120"
+        font-weight="bold"
+        fill="url(#neon)"
+        filter="url(#glow)">
+    SIYA MUSIC
+  </text>
+
+  <text x="1280" y="820"
+        text-anchor="middle"
+        font-size="48"
+        fill="#cfd8ff"
+        letter-spacing="2">
+    Powered by AlfaBots
+  </text>
+
+</svg>
