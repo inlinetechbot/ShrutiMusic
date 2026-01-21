@@ -1,0 +1,82 @@
+<svg width="1200" height="420" viewBox="0 0 1200 420"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <!-- Gradient -->
+    <linearGradient id="neon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f5ff"/>
+      <stop offset="50%" stop-color="#b16cff"/>
+      <stop offset="100%" stop-color="#00f5ff"/>
+    </linearGradient>
+
+    <!-- Glow -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="420" fill="#070b1a"/>
+
+  <!-- Wave -->
+  <path fill="none" stroke="url(#neon)" stroke-width="5"
+        d="M0 210 Q 200 120 400 210 T 800 210 T 1200 210"
+        filter="url(#glow)">
+    <animate attributeName="d"
+      dur="3.5s" repeatCount="indefinite"
+      values="
+      M0 210 Q 200 120 400 210 T 800 210 T 1200 210;
+      M0 210 Q 200 300 400 210 T 800 210 T 1200 210;
+      M0 210 Q 200 120 400 210 T 800 210 T 1200 210"/>
+  </path>
+
+  <!-- Equalizer -->
+  <g transform="translate(520,150)" fill="url(#neon)" filter="url(#glow)">
+    <rect x="0"  y="50" width="10" height="70">
+      <animate attributeName="height" values="40;100;60" dur="0.6s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="20" y="30" width="10" height="90">
+      <animate attributeName="height" values="80;40;110" dur="0.7s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="40" y="10" width="10" height="110">
+      <animate attributeName="height" values="60;120;70" dur="0.5s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="60" y="30" width="10" height="90">
+      <animate attributeName="height" values="90;50;110" dur="0.7s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="80" y="50" width="10" height="70">
+      <animate attributeName="height" values="50;100;60" dur="0.6s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Center Circle -->
+  <circle cx="600" cy="210" r="95"
+          fill="#090f1f"
+          stroke="url(#neon)"
+          stroke-width="4"
+          filter="url(#glow)"/>
+
+  <!-- Title -->
+  <text x="600" y="210"
+        text-anchor="middle"
+        font-size="42"
+        font-weight="bold"
+        fill="url(#neon)"
+        filter="url(#glow)">
+    SIYA MUSIC
+  </text>
+
+  <!-- Subtitle -->
+  <text x="600" y="245"
+        text-anchor="middle"
+        font-size="16"
+        fill="#b8c7ff"
+        letter-spacing="1">
+    Powered by AlfaBots
+  </text>
+
+</svg>
